@@ -5,7 +5,7 @@ const ModalComponent = ({modalVisible, setModalVisible, clearList}) => {
   return (
     <View>
         <Modal
-            animationType="slide"
+            animationType='slide'
             visible={modalVisible}>
             <View style={styles.centeredView}>
             <View style={styles.modalView}>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
       textAlign: 'center',
     },
     containerOptionModal: {
-      flexDirection: "row",
+      flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
     }

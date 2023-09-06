@@ -1,5 +1,5 @@
 import { View, TextInput, StyleSheet, Pressable } from 'react-native'
-import { Ionicons } from "@expo/vector-icons"
+import { Ionicons } from '@expo/vector-icons'
 import React from 'react'
 
 const AddItem = ({text, onChangeText, addItem}) => {
@@ -10,8 +10,8 @@ const AddItem = ({text, onChangeText, addItem}) => {
             onChangeText={(value) => onChangeText(value)}
             value={text}/>
 
-            <Pressable onPress={() => addItem()}>
-                <Ionicons name="add" size={24} color="white" style={styles.add} />
+            <Pressable onPress={() => addItem()} style={styles.add}>
+                <Ionicons name='add' size={24} color='white' />
             </Pressable>
         </View>
       );
@@ -20,8 +20,8 @@ const AddItem = ({text, onChangeText, addItem}) => {
 
 const styles = StyleSheet.create({
     containerInput: {
-        flexDirection: "row",
-        alignItems: "center",
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     input: {
       height: 40,
@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
     add: {
       height: 40,
       width: 40,
-      backgroundColor: "#000",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      backgroundColor: '#000',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   });
   

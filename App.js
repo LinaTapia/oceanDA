@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, SafeAreaView} from "react-native";
+import { StyleSheet, Text, SafeAreaView, Pressable} from 'react-native';
 import AddItem from './src/components/AddItem';
 import ModalComponent from './src/components/Modal';
 import IndexList from './src/components/Lista/IndexList';
 
 export default function App() {
   const initialState = [{id: 1, text: 'Tapón Oceano'},{id: 2, text: 'Tunel Negro'},{id: 3, text: 'Tapón Humo Negro'}]
-  const [text, onChangeText] = useState("")
+  const [text, onChangeText] = useState('')
   const [list, setList] = useState(initialState)
   const [modalVisible, setModalVisible] = useState(false);
 
   const addItem = () => {
-    if(text == "") return
+    if(text == '') return
     list.push({id: Math.random(), text: text})
     setList(list)
-    onChangeText("")
+    onChangeText('')
   }
 
   const clearList = () => {
@@ -35,12 +35,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF",
-    alignItems: "center",
-    justifyContent: "start",
+    backgroundColor: '#FFF',
+    alignItems: 'center',
+    justifyContent: 'start',
   },
   importantText: {
     fontSize: 32,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   }
 });

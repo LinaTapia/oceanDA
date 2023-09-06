@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Pressable } from 'react-native'
 import React from 'react'
 
-const ListItem = ({item}) => {
+const ListItem = ({item, setModalVisible}) => {
   return (
     <View>
         <Text style={styles.items}>{item.text}</Text>
@@ -15,10 +15,10 @@ const styles = StyleSheet.create({
       padding: 12,
       width: 265,
       borderWidth: 1,
-      backgroundColor: "#000",
-      color: "#FFF",
+      backgroundColor: '#000',
+      color: '#FFF',
       fontSize: 16,
-      fontWeight: "bold",
+      fontWeight: 'bold',
       margin: 12,
     }
   });
